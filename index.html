@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>satrian — Toko Parfum Online</title>
+  <meta name="description" content="SATRIA PARFUM - Pilihan wewangian eksklusif. Belanja parfum original, cepat & aman." />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head><script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+  <!-- Sticky header -->
+  <header class="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold">S</div>
+        <div>
+          <div class="text-lg font-semibold">SATRIAN PARFUM</div>
+          <div class="text-xs text-gray-500">Original — Eksklusif — Cepat</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+        <a href="#koleksi" class="hover:text-purple-600">Koleksi</a>
+        <a href="#best-seller" class="hover:text-purple-600">Best Seller</a>
+        <a href="#testimoni" class="hover:text-purple-600">Testimoni</a>
+        <a href="#about" class="hover:text-purple-600">Tentang</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="searchBtn" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-md border text-sm">🔍 Cari</button>
+        <div class="relative">
+          <button id="cartBtn" class="flex items-center gap-2 px-3 py-2 rounded-md border bg-white">
+            🧺 <span class="text-sm">Keranjang</span>
+            <span id="cartCount" class="ml-1 inline-flex items-center justify-center w-6 h-6 text-xs font-semibold bg-red-500 text-white rounded-full">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-purple-50 to-white">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Temukan Wewangian yang <span class="text-purple-600">Mewakili Dirimu</span></h1>
+        <p class="mt-4 text-gray-600">Parfum original dari brand internasional & lokal — packaging elegan, pengiriman cepat, pembayaran aman.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#koleksi" class="px-5 py-3 bg-purple-600 text-white rounded-lg shadow hover:opacity-90">Belanja Sekarang</a>
+          <a href="#about" class="px-5 py-3 border rounded-lg">Tentang Kami</a>
+          
+</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-gray-600">
+          <div class="flex items-center gap-2"><span>✅</span> 100% Original</div>
+          <div class="flex items-center gap-2"><span>🚚</span> Pengiriman Cepat</div>
+          <div class="flex items-center gap-2"><span>🔒</span> Pembayaran Aman</div>
+          <div class="flex items-center gap-2"><span>💬</span> Layanan CS 24/7</div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <img src="1.jpg" alt="hero" class="w-full rounded-2xl hero-img shadow-lg" />
+        <div class="absolute bottom-4 right-4 p-3 bg-white/80 rounded-xl shadow">Diskon hingga <strong>25%</strong> untuk pembelian pertama!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product grid -->
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <h2 id="koleksi" class="text-2xl font-bold mb-4">Koleksi Terbaru</h2>
+    <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+
+    <h2 id="best-seller" class="text-2xl font-bold mt-12 mb-4">Best Seller</h2>
+    <div id="best" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </main>
+
+  <!-- Testimonial -->
+  <section id="testimoni" class="bg-white border-t py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-xl font-bold mb-6">Apa kata pelanggan?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-4 bg-gray-50 rounded-lg">"Parfumnya tahan lama dan asli! Pengiriman juga cepat." <footer class="mt-3 text-sm text-gray-500">— WILZZ</footer></blockquote>
+        <blockquote class="p-4 bg-gray-50 rounded-lg">"Packaging rapi, recommended banget." <footer class="mt-3 text-sm text-gray-500">— aldi </footer></blockquote>
+        <blockquote class="p-4 bg-gray-50 rounded-lg">"Harga pas dan pelayanan ramah,skaligus kalau buat print,cetak foto ,dll semua nya lengkap recommended banget ." <footer class="mt-3 text-sm text-gray-500">— Lina</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Footer -->
+  <footer id="about" class="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-600">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="font-semibold">SATRIAN PARFUM</h4>
+        <p class="mt-2">Toko parfum online terpercaya. Original, cepat, dan aman.</p>
+      </div>
+      <div>
+        <h5 class="font-semibold">Bantuan</h5>
+        <ul class="mt-2 space-y-1">
+          <li>FAQ</li>
+          <li>Pengiriman</li>
+          
+          <li>Pengembalian</li>
+          
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold">Kontak</h5>
+        <a href="https://www.instagram.com/rey_nsru?igsh=MXg4enUwYjBnNmpsdw==" target="_instagram">
+        <p class="mt-2">Email: SATRIATHALIB2005@GMAIL.COM</p>  
+        <p>Tel: 085240021250</p>
+     
+  
+      </div>
+    </div>
+    <div class="mt-6 text-center text-gray-400">© <span id="year"></span> F2 PARFUM — Semua hak dilindungi.</div>
+  </footer>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+    <div class="bg-white rounded-xl max-w-3xl w-full overflow-hidden shadow-lg">
+      <div class="p-4 flex justify-between items-start">
+        <div>
+          <h3 id="modalTitle" class="text-xl font-bold"></h3>
+          <p id="modalPrice" class="text-purple-600 font-semibold mt-1"></p>
+        </div>
+        <button id="closeModal" class="text-gray-500">✖️</button>
+      </div>
+      <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img id="modalImg" src="" alt="" class="w-full rounded-lg" />
+        <div>
+          <p id="modalDesc" class="text-gray-700"></p>
+          <div class="mt-4 flex gap-3">
+            <button id="addToCartModal" class="px-4 py-2 bg-purple-600 text-white rounded">Tambah ke Keranjang</button>
+            <button id="buyNowModal" class="px-4 py-2 border rounded">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mini cart drawer -->
+  <div id="cartDrawer" class="fixed right-4 bottom-4 z-50 bg-white shadow-lg rounded-xl w-80 p-4 hidden">
+    <h4 class="font-semibold">Keranjangmu</h4>
+    <div id="cartItems" class="mt-3 max-h-48 overflow-auto"></div>
+    <div class="mt-4 flex justify-between items-center">
+      <div class="font-bold">Total: <span id="cartTotal">Rp0</span></div>
+      <button id="checkoutBtn" class="px-3 py-2 bg-green-600 text-white rounded">Checkout</button>
+      <div id="qrModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+  <div class="bg-white rounded-xl p-6 text-center">
+    <h3 class="text-lg font-bold mb-4">Scan untuk Bayar</h3>
+    <div id="qrcode"></div>
+    <p class="mt-4 text-gray-600 text-sm">Setelah transfer, pesananmu otomatis terkonfirmasi.</p>
+    <button id="closeQr" class="mt-6 px-4 py-2 border rounded">Tutup</button>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
